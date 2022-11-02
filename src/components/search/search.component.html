@@ -1,0 +1,31 @@
+<section class="container">
+  <form #search="ngForm" class="search-container" (ngSubmit)="onSearch()">
+    <h1 class="title">STOCK TRACKER</h1>
+    <p>
+      Entry the symbol of a stock to track (i.e. APPL, TSLA, GOOGLE, GCLN, PGAL,
+      SHANF)
+    </p>
+    <input
+      type="text"
+      id="stockInput"
+      [(ngModel)]="inputValue"
+      name="input"
+      minlength="1"
+      maxlength="5"
+      required
+    />
+    <button id="trackBtn" type="submit" [disabled]="!search.valid">
+      Track Stock
+    </button>
+    <div class="error" *ngIf="noData">
+      Some Error, try again with correct symbol
+    </div>
+    <div class="error" *ngIf="duplicate">Element exist</div>
+  </form>
+  <div *ngFor="let stock of choosenStocks">
+    <app-card
+      (onDeleteClicked)="onDelete($event)"
+      [stockQuote]="stock"
+    ></app-card>
+  </div>
+</section>

@@ -1,0 +1,43 @@
+<div class="container" *ngIf="stockQuote">
+  <div class="header">
+    <h2>{{ stockQuote.base.description }}</h2>
+    <h2>({{ stockQuote.base.displaySymbol }})</h2>
+    <div
+      class="delete"
+      (click)="onDelete()"
+      [id]="'remove' + stockQuote.base.displaySymbol"
+    >
+      &#215;
+    </div>
+  </div>
+  <div class="content">
+    <div class="details">
+      <span> <b>Change today:</b> {{ stockQuote.value.change }}%</span>
+      <span>
+        <b>Opening price:</b> ${{ stockQuote.value.openPriceOfTheDay }}</span
+      >
+    </div>
+    <div class="details">
+      <span> <b>Current price:</b> ${{ stockQuote.value.currentPrice }}</span>
+      <span> <b>High price:</b> ${{ stockQuote.value.highPriceOfTheDay }}</span>
+    </div>
+    <div class="arrow-up" *ngIf="stockQuote.value.precentChange > 0">
+      &#8593;
+    </div>
+    <div class="arrow-zero" *ngIf="stockQuote.value.precentChange === 0">
+      &#8646;
+    </div>
+    <div class="arrow-down" *ngIf="stockQuote.value.precentChange < 0">
+      &#8595;
+    </div>
+  </div>
+
+  <div class="footer">
+    <button
+      (click)="onDirect()"
+      [id]="'sentiment' + stockQuote.base.displaySymbol"
+    >
+      Go to social sentiment details
+    </button>
+  </div>
+</div>

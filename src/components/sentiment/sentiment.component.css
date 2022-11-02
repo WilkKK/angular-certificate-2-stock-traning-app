@@ -1,0 +1,48 @@
+.details-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.details-item {
+  display: flex;
+  gap: 20px;
+}
+
+.details-item-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.arrow-down {
+  font-size: 50px;
+  color: red;
+  margin-top: -15px;
+}
+
+.arrow-up {
+  font-size: 50px;
+  color: green;
+  margin-top: -15px;
+}
+
+.arrow-zero {
+  font-size: 50px;
+  color: grey;
+  margin-top: -15px;
+}
+
+.container {
+  width: 50%;
+  border-radius: 25px;
+  border: 2px solid #000099;
+  padding: 10px;
+  background-color: rgba(153, 204, 255, 0.3);
+}
+
+.back {
+  margin-top: 15px;
+}
+
+.header {
+  margin-top: 0;
+}

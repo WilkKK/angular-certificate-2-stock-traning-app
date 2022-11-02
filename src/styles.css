@@ -1,0 +1,15 @@
+button {
+  border-radius: 25px;
+  border: 2px solid #000099;
+  padding: 6px;
+  padding-right: 10px;
+  padding-left: 10px;
+  margin-right: 30px;
+  font-family: 'Open Sans';
+  background-color: rgba(0, 0, 153, 0.1);
+  cursor: pointer;
+}
+
+body {
+  background: rgba(153, 204, 255, 0.3);
+}

@@ -1,0 +1,20 @@
+.container {
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 30px;
+  align-items: center;
+  gap: 20px;
+}
+
+input {
+  border-radius: 25px;
+  border: 2px solid #000099;
+  width: 200px;
+  height: 25px;
+  margin-right: 30px;
+}
+
+.error {
+  color: red;
+}
